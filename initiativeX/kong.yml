@@ -1,0 +1,24 @@
+format_version: "2.1"
+
+services:
+
+  - name: service1
+    # url: http://134.238.14.53:8080
+    host: service1
+    routes:
+      - name: service1
+        paths:
+          - /service1
+        methods:
+          - GET
+          - POST
+
+  - name: service2
+    url: http://localhost:8081
+    routes:
+      - name: service2
+        paths:
+          - /service2
+        methods:
+          - GET
+          - POST
