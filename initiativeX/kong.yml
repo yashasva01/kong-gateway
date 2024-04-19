@@ -1,10 +1,11 @@
-format_version: "2.1"
+_format_version: "3.0"
+_transform: true
 
 services:
-
   - name: service1
-    # url: http://134.238.14.53:8080
     host: service1
+    port: 8080
+    protocol: http
     routes:
       - name: service1
         paths:
@@ -14,7 +15,9 @@ services:
           - POST
 
   - name: service2
-    url: http://localhost:8081
+    host: service2
+    port: 8081
+    protocol: http
     routes:
       - name: service2
         paths:
@@ -22,3 +25,4 @@ services:
         methods:
           - GET
           - POST
+
